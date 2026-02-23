@@ -1,24 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let depth = window.location.pathname.split("/").length - 2;
+    let prefix = "";
+    for (let i = 0; i < depth - 1; i++) {
+        prefix += "../";
+    }
 
-    const path = window.location.pathname.includes("/categories/")
-        ? "../partials/"
-        : "partials/";
-
-    fetch(path + "header.html")
+    fetch(prefix + "partials/header.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
-
-            // 🔥 IMPORTANT: setup menus AFTER header loads
             setupMenus();
         });
 
-    fetch(path + "footer.html")
+    fetch(prefix + "partials/footer.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("footer-placeholder").innerHTML = data;
         });
-
 });
 
 // Recipe data - will be overridden by window.recipeData if present
