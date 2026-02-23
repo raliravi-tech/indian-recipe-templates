@@ -1,0 +1,118 @@
+<!-- Header -->
+<header>
+<div class="logo-section">
+	<div class="logo-container">
+		<div class="logo">
+			<svg viewBox="0 0 200 200" class="logo-svg">
+			<!-- Gold Gradient -->
+			<defs>
+				<linearGradient id="royalGold" x1="0%" y1="0%" x2="100%" y2="100%">
+					<stop offset="0%" stop-color="#F5D76E"/>
+					<stop offset="40%" stop-color="#D4AF37"/>
+					<stop offset="70%" stop-color="#A67C00"/>
+					<stop offset="100%" stop-color="#7A5C0A"/>
+				</linearGradient>
+
+				<filter id="softShadow">
+				  <feDropShadow dx="0" dy="4" stdDeviation="3"
+					  flood-color="#B9770E"
+					  flood-opacity="0.35"/>
+				</filter>
+			</defs>
+
+			<!-- Elegant Gold Ring -->
+			<circle cx="100" cy="100" r="92"
+			fill="none"
+			stroke="url(#royalGold)"
+			stroke-width="8"
+			filter="url(#softShadow)"/>
+
+			<circle cx="100" cy="100" r="85"
+					fill="none"
+					stroke="#7FB77E"
+					stroke-width="2"
+					opacity="0.4"/>
+
+			<path d="M35 70 A90 90 0 0 1 165 70"
+			stroke="white"
+			stroke-width="6"
+			opacity="0.15"
+			fill="none"/>
+
+
+				<!-- Inner Cream Circle -->
+				<circle cx="100" cy="100" r="80" fill="#FDF3D7"/>
+
+				<!-- Paisley Overlay -->
+				<circle cx="100" cy="100" r="80" fill="url(#paisley)"/>
+
+				<!-- Decorative Dotted Ring -->
+				<circle cx="100" cy="100" r="70"
+						fill="none"
+						stroke="#C48A2D"
+						stroke-width="2"
+						stroke-dasharray="4 6"
+						opacity="0.6"/>
+
+				<!-- Diya Icon -->
+				<path d="M90 65 Q100 55 110 65 Q100 75 90 65 Z"
+					  fill="#C44536"/>
+
+				<ellipse cx="100" cy="60" rx="4" ry="6"
+						 fill="#FFD700"/>
+
+				<!-- IRT Text -->
+				<text x="100" y="120"
+					  text-anchor="middle"
+					  font-family="Cormorant Garamond, serif"
+					  font-size="48"
+					  font-weight="700"
+					  fill="#E67E22"
+					  letter-spacing="4">
+					IRT
+				</text>
+			</svg>
+		</div>                
+		<div class="logo-text">
+			<h1>Indian Recipe Templates</h1>
+			<div class="tagline">Perfected Measurements • Traditional Flavors</div>
+		</div>
+	</div>
+</div>
+        
+<!-- Navigation -->
+<nav>
+	<ul>
+		<li><a href="/index.html" data-page="home" class="active">Home</a></li>
+		<li id="recipes-menu">
+			<a href="#" class="has-dropdown">Recipes</a>
+			<ul>
+				<li id="vegetarian-menu">
+					<a href="#" class="has-dropdown">Vegetarian</a>
+					<ul>
+						<li><a href="#curries" class="nav-link" data-page="curries">Curries</a></li>
+						<li><a href="/categories/ricedishes.html">Rice Dishes</a></li>
+						<li><a href="#breads" class="nav-link" data-page="breads">Breads</a></li>
+						<li><a href="#snacks" class="nav-link" data-page="snacks">Snacks</a></li>
+					</ul>
+				</li>
+				<li id="regional-menu">
+					<a href="#" class="has-dropdown">Regional</a>
+					<ul>
+						<li><a href="#north-indian" class="nav-link" data-page="north-indian">North Indian</a></li>
+						<li><a href="#south-indian" class="nav-link" data-page="south-indian">South Indian</a></li>
+					</ul>
+				</li>
+				<li id="cooking-methods-menu">
+					<a href="#" class="has-dropdown">Cooking Methods</a>
+					<ul>
+						<li><a href="#instant-pot" class="nav-link" data-page="instant-pot">Instant Pot</a></li>
+						<li><a href="#pressure-cooker" class="nav-link" data-page="pressure-cooker">Pressure Cooker</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="/about.html">About</a></li>
+	</ul>
+</nav>
+</header>

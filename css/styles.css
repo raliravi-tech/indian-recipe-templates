@@ -1,0 +1,1031 @@
+        :root {
+            --saffron: #FF9933;
+            --deep-saffron: #E67E22;
+            --turmeric: #F39C12;
+            --cardamom: #27AE60;
+            --cinnamon: #8B4513;
+            --cream: #FFF8E7;
+            --warm-white: #FFFBF0;
+            --charcoal: #2C3E50;
+            --terracotta: #C44536;
+            --mild-spice: #FFE5CC;
+            
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Karla', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--warm-white);
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+
+        /* Header with traditional border pattern */
+        header {
+            background: linear-gradient(135deg, var(--saffron) 0%, var(--deep-saffron) 100%);
+            padding: 2rem 0 0 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: visible;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--cardamom) 0px,
+                var(--cardamom) 15px,
+                var(--cream) 15px,
+                var(--cream) 30px,
+                var(--terracotta) 30px,
+                var(--terracotta) 45px,
+                var(--cream) 45px,
+                var(--cream) 60px
+            );
+        }
+
+        /* Logo and Title Section */
+        .logo-section {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+.logo {
+    width: 150px;
+    height: 150px;
+    animation: floatElegant 4s ease-in-out infinite;
+}
+
+.logo-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@keyframes floatElegant {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.logo-text {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-chili {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 1.6rem;
+}
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid var(--cardamom);
+            opacity: 0.3;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FFF8E7;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 12px rgba(0,0,0,0.25);
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #FFF8E7;
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
+    }
+}
+
+.hero {
+    background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=1200&h=800&fit=crop');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 2rem;
+    text-align: center;
+    color: #FFF8E7;
+    border-radius: 20px;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 12px 28px;
+    background: #F39C12;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #D68910;
+    transform: translateY(-3px);
+}
+
+        /* Navigation */
+        nav {
+            background: var(--charcoal);
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav > ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            display: block;
+            padding: 1.2rem 2rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--saffron);
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav a:hover::before, nav a.active::before {
+            transform: translateX(0);
+        }
+
+        nav a:hover, nav a.active {
+            background: rgba(255, 153, 51, 0.1);
+            color: var(--saffron);
+        }
+
+        /* Dropdown menus - hidden by default */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(180deg, #34495e 0%, var(--charcoal) 100%);
+            min-width: 240px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            z-index: 1000;
+            border-radius: 0 0 8px 8px;
+            overflow: visible;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Show dropdown when parent has 'open' class */
+        nav li.open > ul {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        /* Second level dropdown (nested) */
+        nav ul ul ul {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: linear-gradient(180deg, #3d566e 0%, #2C3E50 100%);
+            min-width: 220px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+            border-radius: 0 8px 8px 0;
+            margin-left: 0;
+        }
+
+        nav ul ul a {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        nav ul ul a::before {
+            display: none;
+        }
+
+        nav ul ul a:hover {
+            background: var(--deep-saffron);
+            padding-left: 2rem;
+            color: white;
+        }
+
+        /* Arrow indicators */
+        nav a.has-dropdown::after {
+            content: '▾';
+            margin-left: 0.5rem;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        nav ul ul a.has-dropdown::after {
+            content: '▸';
+            float: right;
+            margin-left: 0;
+        }
+
+        nav li.open > a.has-dropdown::after {
+            transform: rotate(180deg);
+        }
+
+        nav ul ul li.open > a.has-dropdown::after {
+            transform: rotate(90deg);
+        }
+
+        /* Mobile responsive menu */
+        @media (max-width: 768px) {
+            nav > ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav li {
+                width: 100%;
+            }
+
+            nav a {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav ul ul {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                background: rgba(0,0,0,0.3);
+            }
+
+            nav ul ul ul {
+                position: static;
+                margin-left: 0;
+                background: rgba(0,0,0,0.2);
+            }
+
+            nav ul ul a {
+                padding-left: 3rem;
+            }
+
+            nav ul ul ul a {
+                padding-left: 4.5rem;
+            }
+
+            nav ul ul a:hover {
+                padding-left: 3.5rem;
+            }
+
+            nav ul ul ul a:hover {
+                padding-left: 5rem;
+            }
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* Home Page Styles */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--mild-spice) 0%, var(--cream) 100%);
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🌶️';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            font-size: 200px;
+            opacity: 0.1;
+            transform: rotate(25deg);
+        }
+
+        .hero::after {
+            content: '🍛';
+            position: absolute;
+            bottom: -60px;
+            left: -60px;
+            font-size: 220px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .hero h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--cinnamon);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-grid {
+    	gap: 2rem;
+    	margin-top: 3rem;
+	}
+	/* Only grid when NOT carousel */
+	.feature-grid:not(.horizontal-scroll) {
+    	display: grid;
+    	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--saffron);
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0 0;
+            margin: -2rem -2rem 1.5rem -2rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.05);
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--cinnamon);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+.feature-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+        /* Recipe Template Styles */
+        .recipe-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .recipe-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--mild-spice);
+        }
+
+        .recipe-title {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            color: var(--cinnamon);
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+
+        .recipe-description {
+            font-size: 1.15rem;
+            color: var(--charcoal);
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .recipe-labels {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .label {
+            padding: 0.4rem 1rem;
+            background: var(--saffron);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .label.vegetarian { background: var(--cardamom); }
+        .label.rice-dish { background: var(--turmeric); }
+        .label.pressure-cooker { background: var(--terracotta); }
+        .label.instant-pot { background: var(--deep-saffron); }
+
+        /* Recipe Controls */
+        .recipe-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background: var(--warm-white);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .servings-control {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .servings-control label {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--charcoal);
+        }
+
+        .servings-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            border-radius: 8px;
+            padding: 0.3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .serving-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: var(--warm-white);
+            color: var(--charcoal);
+            border-radius: 6px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .serving-btn:hover {
+            background: var(--saffron);
+            color: white;
+        }
+
+        .serving-btn:active {
+            transform: scale(0.95);
+        }
+
+        #servings-display {
+            min-width: 40px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+        }
+
+        .action-btn:hover {
+            background: var(--mild-spice);
+            border-color: var(--saffron);
+            color: var(--deep-saffron);
+        }
+
+        .action-btn:active {
+            transform: scale(0.95);
+        }
+
+        .get-cooking-btn {
+            padding: 0.7rem 1.5rem;
+            background: var(--charcoal);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .get-cooking-btn:hover {
+            background: var(--cinnamon);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .get-cooking-btn:active {
+            transform: translateY(0);
+        }
+
+        .ingredients-section, .instructions-section {
+            margin: 2rem 0;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--cinnamon);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--saffron);
+        }
+
+        .ingredients-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .ingredient-item {
+            padding: 1rem;
+            background: var(--warm-white);
+            border-left: 4px solid var(--cardamom);
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ingredient-amount {
+            font-weight: 600;
+            color: var(--deep-saffron);
+        }
+
+        .instructions-list {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+
+        .instruction-step {
+            counter-increment: step-counter;
+            margin-bottom: 2rem;
+            padding-left: 4rem;
+            position: relative;
+        }
+
+        .instruction-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3rem;
+            height: 3rem;
+            background: var(--saffron);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: var(--font-display);
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--cinnamon);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Navigation Buttons */
+        .recipe-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--mild-spice);
+            gap: 1rem;
+        }
+
+        .nav-button {
+            flex: 1;
+            padding: 1.2rem 2rem;
+            background: var(--saffron);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nav-button:hover {
+            background: var(--deep-saffron);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-button.prev::before {
+            content: '←';
+            font-size: 1.3rem;
+        }
+
+        .nav-button.next::after {
+            content: '→';
+            font-size: 1.3rem;
+        }
+
+        .nav-button.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* About Page Styles */
+        .about-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .about-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--cinnamon);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--deep-saffron);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .about-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .logo-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav > ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav li {
+                width: 100%;
+            }
+
+            nav a {
+                padding: 1rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav ul ul {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                background: rgba(0,0,0,0.3);
+            }
+
+            nav ul ul ul {
+                position: static;
+                margin-left: 0;
+                background: rgba(0,0,0,0.2);
+            }
+
+            nav ul ul a {
+                padding-left: 3rem;
+            }
+
+            nav ul ul ul a {
+                padding-left: 4.5rem;
+            }
+
+            nav ul ul a:hover {
+                padding-left: 3.5rem;
+            }
+
+            nav ul ul ul a:hover {
+                padding-left: 5rem;
+            }
+
+            .recipe-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .recipe-title {
+                font-size: 2rem;
+            }
+
+            .recipe-description {
+                font-size: 1rem;
+            }
+
+            .recipe-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .servings-control {
+                justify-content: space-between;
+            }
+
+            .action-buttons {
+                justify-content: center;
+            }
+
+            .ingredients-list {
+                grid-template-columns: 1fr;
+            }
+
+            .instruction-step {
+                padding-left: 3.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Page visibility control */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+/* Horizontal Carousel */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll .feature-card {
+    scroll-snap-align: start;
+    flex: 0 0 calc((100% - 4rem) / 3);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .horizontal-scroll .feature-card {
+        flex: 0 0 85%;
+    }
+}
+
+/* Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: var(--saffron);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease, opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    background: var(--deep-saffron);
+}
+
+.carousel-arrow.left {
+    left: -30px;
+}
+
+.carousel-arrow.right {
+    right: -30px;
+}
+
+@media (max-width: 768px) {
+
+    .horizontal-scroll {
+        gap: 1rem;
+    }
+
+    .horizontal-scroll .feature-card {
+        min-width: 85%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .logo { width: 100px; height: 100px; }
+}

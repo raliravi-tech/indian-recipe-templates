@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Pulao - Indian Recipe Templates</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+<!-- Header -->
+<div id="header-placeholder"></div>
+
+<main>
+
+    <div class="recipe-container">
+
+        <div class="recipe-header">
+            <h2 class="recipe-title">One-Pot Pressure Cooker Veg Pulao</h2>
+            <p class="recipe-description">
+                Easy vegetable pulao made in a pressure cooker - just layer everything and let it cook to perfection!
+            </p>
+
+            <div class="recipe-labels">
+                <span class="label vegetarian">Vegetarian</span>
+                <span class="label rice-dish">Rice Dish</span>
+                <span class="label pressure-cooker">Pressure Cooker</span>
+                <span class="label instant-pot">Instant Pot</span>
+            </div>
+        </div>
+
+        <div class="recipe-controls">
+            <div class="servings-control">
+                <label>Servings</label>
+                <div class="servings-buttons">
+                    <button class="serving-btn" onclick="decreaseServings()">−</button>
+                    <span id="servings-display">4</span>
+                    <button class="serving-btn" onclick="increaseServings()">+</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                 <button class="action-btn" onclick="changeUnits()" title="Change Units">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
+            </div>
+        </div>
+
+        <div class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            <ul class="ingredients-list" id="ingredients"></ul>
+        </div>
+
+        <div class="instructions-section">
+            <h3 class="section-title">Instructions</h3>
+
+            <ol class="instructions-list">
+                <li class="instruction-step">
+                    <div class="step-title">Rinse the rice</div>
+                    <p>Wash basmati rice in cold water 2-3 times until water runs clear. Soak for 15 minutes, then drain completely.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Layer ingredients</div>
+                    <p>Add ghee or oil. Add cumin seeds, bay leaf, cinnamon, cloves, cardamom. Add onion at bottom.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add vegetables</div>
+                    <p>Add ginger-garlic paste, chilies, tomato, mixed vegetables evenly.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add rice & masala</div>
+                    <p>Add drained rice. Sprinkle salt, turmeric, chili powder, garam masala.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Pressure cook</div>
+                    <p>Add water. Do not stir. Cook at low pressure 3 minutes after steam release.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Natural release</div>
+                    <p>Allow natural pressure release 10–15 minutes.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Fluff & serve</div>
+                    <p>Fluff gently and serve hot.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="recipe-navigation">
+            <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
+	     <a href="veg-friedrice.html" class="nav-button next">Veg Fried Rice</a>
+        </div>
+
+
+    </div>
+
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div> 
+
+</body>
+</html>

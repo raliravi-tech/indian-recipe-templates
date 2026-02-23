@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veg Hyderabadi Biryani - Indian Recipe Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+<!-- Header -->
+<div id="header-placeholder"></div>
+<script>
+window.recipeData = {
+    title: "Hyderabadi Veg Dum Biryani",
+    baseServings: 4,
+    ingredients: [
+
+        // Rice
+        { name: "basmati rice", amount: 2, unit: "cups", metric: 400, metricUnit: "g" },
+
+        // Vegetables
+        { name: "mixed vegetables (carrot, beans, peas, potato)", amount: 2.5, unit: "cups", metric: 400, metricUnit: "g" },
+
+        // Marinade base
+        { name: "thick yogurt (curd)", amount: 1, unit: "cup", metric: 240, metricUnit: "g" },
+        { name: "ginger-garlic paste", amount: 2, unit: "tbsp", metric: 30, metricUnit: "g" },
+        { name: "green chilies (slit)", amount: 3, unit: "pieces", metric: 3, metricUnit: "pieces" },
+
+        // Fresh herbs
+        { name: "fresh mint leaves (chopped)", amount: 0.75, unit: "cup", metric: 20, metricUnit: "g" },
+        { name: "fresh coriander leaves (chopped)", amount: 0.75, unit: "cup", metric: 25, metricUnit: "g" },
+
+        // Whole spices
+        { name: "bay leaf", amount: 1, unit: "piece", metric: 1, metricUnit: "piece" },
+        { name: "cinnamon stick", amount: 1, unit: "inch", metric: 3, metricUnit: "g" },
+        { name: "cloves", amount: 4, unit: "pieces", metric: 4, metricUnit: "pieces" },
+        { name: "green cardamom", amount: 4, unit: "pods", metric: 4, metricUnit: "pods" },
+        { name: "shah jeera (caraway)", amount: 1, unit: "tsp", metric: 4, metricUnit: "g" },
+
+        // Powder spices
+        { name: "red chili powder", amount: 1.5, unit: "tsp", metric: 6, metricUnit: "g" },
+        { name: "turmeric powder", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
+        { name: "biryani masala (authentic)", amount: 1.5, unit: "tsp", metric: 6, metricUnit: "g" },
+        { name: "salt", amount: 1.5, unit: "tsp", metric: 8, metricUnit: "g" },
+
+        // Rice boiling
+        { name: "water (for boiling rice)", amount: 8, unit: "cups", metric: 1900, metricUnit: "ml" },
+
+        // Layering
+        { name: "fried onions (birista)", amount: 1, unit: "cup", metric: 60, metricUnit: "g" },
+        { name: "saffron soaked in warm milk", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" },
+        { name: "ghee", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" }
+    ]
+};
+</script>
+
+<div id="header-placeholder"></div>
+
+<main>
+<div class="recipe-container">
+
+    <div class="recipe-header">
+        <h2 class="recipe-title">Hyderabadi Veg Dum Biryani</h2>
+        <p class="recipe-description">
+            Authentic layered dum-style Hyderabadi vegetable biryani with fried onions, mint, saffron and slow steam cooking.
+        </p>
+
+        <div class="recipe-labels">
+            <span class="label vegetarian">Vegetarian</span>
+            <span class="label rice-dish">Rice Dish</span>
+            <span class="label hyderabadi">Hyderabadi</span>
+            <span class="label dum-style">Dum Cooking</span>
+        </div>
+    </div>
+
+    <div class="recipe-controls">
+        <div class="servings-control">
+            <label>Servings</label>
+            <div class="servings-buttons">
+                <button class="serving-btn" onclick="decreaseServings()">−</button>
+                <span id="servings-display">4</span>
+                <button class="serving-btn" onclick="increaseServings()">+</button>
+            </div>
+        </div>
+
+            <div class="action-buttons">
+                 <button class="action-btn" onclick="changeUnits()" title="Change Units">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
+            </div>
+    </div>
+
+    <div class="ingredients-section">
+        <h3 class="section-title">Ingredients</h3>
+        <ul class="ingredients-list" id="ingredients"></ul>
+    </div>
+
+    <div class="instructions-section">
+        <h3 class="section-title">Instructions</h3>
+        <ol class="instructions-list">
+
+            <li class="instruction-step">
+                <div class="step-title">Marinate vegetables</div>
+                <p>Mix vegetables with yogurt, ginger-garlic paste, chili powder, turmeric, biryani masala, salt, mint, coriander and half the fried onions. Rest 30 minutes.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Cook rice 70%</div>
+                <p>Boil water with whole spices and salt. Add soaked rice and cook until 70% done. Drain immediately.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Layering</div>
+                <p>In heavy pot, spread marinated vegetables at bottom. Layer partially cooked rice over it.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Top layers</div>
+                <p>Add saffron milk, remaining fried onions, mint, coriander and drizzle ghee.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Dum cooking</div>
+                <p>Seal lid tightly. Cook on low flame 20–25 minutes. Rest 10 minutes before opening.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Serve</div>
+                <p>Gently fluff from side. Serve with raita or mirchi ka salan.</p>
+            </li>
+
+        </ol>
+    </div>
+
+    <div class="recipe-navigation">
+        <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
+        <a href="tomato-rice.html" class="nav-button next">Tomato Rice</a>
+    </div>
+
+</div>
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>  
+
+</body>
+</html>

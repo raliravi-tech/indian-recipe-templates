@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Rice - Indian Recipe Templates</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+<!-- Header -->
+<div id="header-placeholder"></div>
+<script>
+window.recipeData = {
+    title: "South Indian Lemon Rice (Chitranna)",
+    baseServings: 4,
+    ingredients: [
+        // Rice
+        { name: "basmati rice or sona masuri rice (cooked and cooled)", amount: 3, unit: "cups", metric: 600, metricUnit: "g" },
+        
+        // For tempering
+        { name: "oil (preferably sesame or coconut oil)", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" },
+        { name: "mustard seeds", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        { name: "split urad dal (white lentils)", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        { name: "chana dal (split bengal gram)", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        { name: "peanuts (raw)", amount: 2, unit: "tbsp", metric: 30, metricUnit: "g" },
+        { name: "curry leaves (fresh)", amount: 10, unit: "pieces", metric: 10, metricUnit: "pieces" },
+        { name: "dry red chilies (broken)", amount: 2, unit: "pieces", metric: 2, metricUnit: "pieces" },
+        { name: "green chilies (slit lengthwise)", amount: 2, unit: "pieces", metric: 2, metricUnit: "pieces" },
+        { name: "asafoetida/hing", amount: 0.25, unit: "tsp", metric: 0.5, metricUnit: "g" },
+        { name: "ginger (finely chopped)", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        
+        // Main ingredients
+        { name: "fresh lemon juice", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" },
+        { name: "turmeric powder", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
+        { name: "salt", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        
+        // Garnish
+        { name: "coriander leaves (chopped, optional)", amount: 2, unit: "tbsp", metric: 10, metricUnit: "g" },
+        { name: "grated coconut (fresh or frozen, optional)", amount: 2, unit: "tbsp", metric: 20, metricUnit: "g" }
+    ]
+};
+</script>
+<div id="header-placeholder"></div>
+
+<main>
+
+    <div class="recipe-container">
+
+        <div class="recipe-header">
+            <h2 class="recipe-title">South Indian Lemon Rice (Chitranna)</h2>
+            <p class="recipe-description">
+                Tangy, flavorful South Indian lemon rice with aromatic tempering - perfect for lunch boxes or quick meals!
+            </p>
+
+            <div class="recipe-labels">
+                <span class="label vegetarian">Vegetarian</span>
+                <span class="label rice-dish">Rice Dish</span>
+                <span class="label south-indian">South Indian</span>
+                <span class="label quick-meal">Quick Meal</span>
+            </div>
+        </div>
+
+        <div class="recipe-controls">
+            <div class="servings-control">
+                <label>Servings</label>
+                <div class="servings-buttons">
+                    <button class="serving-btn" onclick="decreaseServings()">−</button>
+                    <span id="servings-display">4</span>
+                    <button class="serving-btn" onclick="increaseServings()">+</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                 <button class="action-btn" onclick="changeUnits()" title="Change Units">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
+            </div>
+        </div>
+
+        <div class="ingredients-section">
+            <h3 class="section-title">Ingredients</h3>
+            <ul class="ingredients-list" id="ingredients"></ul>
+        </div>
+
+        <div class="instructions-section">
+            <h3 class="section-title">Instructions</h3>
+
+            <ol class="instructions-list">
+                <li class="instruction-step">
+                    <div class="step-title">Cook and cool the rice</div>
+                    <p>Cook rice with slightly less water than usual so grains are separate and not mushy. Spread on a plate and cool to room temperature. Day-old refrigerated rice works perfectly.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Prepare lemon mixture</div>
+                    <p>In a small bowl, mix fresh lemon juice with turmeric powder and salt. Keep aside. The turmeric gives the rice its signature yellow color.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Heat oil for tempering</div>
+                    <p>Heat oil in a wide pan or kadai on medium heat. Sesame or coconut oil gives authentic South Indian flavor, but any vegetable oil works.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add mustard seeds</div>
+                    <p>When oil is hot, add mustard seeds. Let them splutter completely - they should pop and crackle. This takes about 10-15 seconds.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add dals and peanuts</div>
+                    <p>Add urad dal, chana dal, and peanuts. Stir continuously on medium-low heat for 2-3 minutes until dals turn golden brown and peanuts are roasted. Be careful not to burn them.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add aromatics</div>
+                    <p>Add curry leaves, dry red chilies, green chilies, asafoetida, and chopped ginger. Stir for 30 seconds until fragrant. Curry leaves will crackle and become crispy.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Mix in rice</div>
+                    <p>Turn heat to low. Add the cooled rice and mix gently to coat with the tempering. Break any large clumps with a spatula. Stir for 2 minutes to heat through.</p>
+                </li>
+
+                <li class="instruction-step">
+                    <div class="step-title">Add lemon mixture and finish</div>
+                    <p>Pour the lemon-turmeric mixture over the rice. Mix gently but thoroughly until rice is evenly coated and turns yellow. Taste and adjust salt if needed. Garnish with coriander leaves and grated coconut. Serve warm or at room temperature.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="recipe-navigation">
+            <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
+            <a href="veg-hyd-biryani.html" class="nav-button next">Vegetable Biryani</a>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>  
+
+</body>
+</html>

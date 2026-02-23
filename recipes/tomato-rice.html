@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomato Rice - Indian Recipe Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+<!-- Header -->
+<div id="header-placeholder"></div>
+<script>
+window.recipeData = {
+    title: "South Indian Tomato Rice",
+    baseServings: 4,
+    ingredients: [
+
+        // Rice
+        { name: "basmati rice (cooked and cooled)", amount: 3, unit: "cups", metric: 600, metricUnit: "g" },
+
+        // Main base
+        { name: "ripe tomatoes (finely chopped)", amount: 3, unit: "medium", metric: 450, metricUnit: "g" },
+        { name: "onion (thinly sliced)", amount: 1, unit: "large", metric: 150, metricUnit: "g" },
+        { name: "green chilies (slit)", amount: 2, unit: "pieces", metric: 2, metricUnit: "pieces" },
+        { name: "ginger-garlic paste", amount: 1, unit: "tbsp", metric: 15, metricUnit: "g" },
+
+        // Tempering
+        { name: "oil", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" },
+        { name: "mustard seeds", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        { name: "cumin seeds", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+        { name: "curry leaves", amount: 10, unit: "pieces", metric: 10, metricUnit: "pieces" },
+
+        // Spices
+        { name: "turmeric powder", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
+        { name: "red chili powder", amount: 1, unit: "tsp", metric: 4, metricUnit: "g" },
+        { name: "garam masala", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
+        { name: "salt", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+
+        // Optional garnish
+        { name: "fresh coriander leaves (chopped)", amount: 2, unit: "tbsp", metric: 10, metricUnit: "g" }
+    ]
+};
+</script>
+
+<div id="header-placeholder"></div>
+
+<main>
+
+<div class="recipe-container">
+
+    <div class="recipe-header">
+        <h2 class="recipe-title">South Indian Tomato Rice</h2>
+        <p class="recipe-description">
+            Flavorful, mildly spicy tomato rice made with aromatic tempering and perfectly cooked rice.
+        </p>
+
+        <div class="recipe-labels">
+            <span class="label vegetarian">Vegetarian</span>
+            <span class="label rice-dish">Rice Dish</span>
+            <span class="label south-indian">South Indian</span>
+            <span class="label quick-meal">Quick Meal</span>
+        </div>
+    </div>
+
+    <div class="recipe-controls">
+        <div class="servings-control">
+            <label>Servings</label>
+            <div class="servings-buttons">
+                <button class="serving-btn" onclick="decreaseServings()">−</button>
+                <span id="servings-display">4</span>
+                <button class="serving-btn" onclick="increaseServings()">+</button>
+            </div>
+        </div>
+
+            <div class="action-buttons">
+                 <button class="action-btn" onclick="changeUnits()" title="Change Units">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                                <rect x="6" y="14" width="12" height="8"></rect>
+                            </svg>
+                        </button>
+                        <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
+            </div>
+    </div>
+
+    <div class="ingredients-section">
+        <h3 class="section-title">Ingredients</h3>
+        <ul class="ingredients-list" id="ingredients"></ul>
+    </div>
+
+    <div class="instructions-section">
+        <h3 class="section-title">Instructions</h3>
+
+        <ol class="instructions-list">
+
+            <li class="instruction-step">
+                <div class="step-title">Cook and cool the rice</div>
+                <p>Cook rice until fluffy and separate. Spread on a plate and cool completely to prevent clumping.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Prepare tempering</div>
+                <p>Heat oil in a pan. Add mustard seeds and let them splutter. Add cumin seeds and curry leaves.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Cook onion and tomatoes</div>
+                <p>Add sliced onions and sauté until soft. Add ginger-garlic paste and green chilies. Add chopped tomatoes and cook until soft and oil separates.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Add spices</div>
+                <p>Add turmeric, chili powder, garam masala, and salt. Mix well and cook 2 minutes.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Mix rice</div>
+                <p>Add cooled rice and gently mix until evenly coated with masala. Cook on low heat 3–4 minutes.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Finish and serve</div>
+                <p>Garnish with fresh coriander leaves. Serve hot with raita or papad.</p>
+            </li>
+
+        </ol>
+    </div>
+
+    <div class="recipe-navigation">
+        <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
+        <a href="veg-friedrice.html" class="nav-button next">Curd Rice</a>
+    </div>
+
+</div>
+
+</main>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div> 
+
+</body>
+</html>
