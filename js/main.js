@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
             setupMenus();
+            fixLinks();
         });
 
     fetch(prefix + "partials/footer.html")
@@ -304,5 +305,24 @@ function updateArrows() {
     } else {
         rightArrow.style.opacity = "1";
         rightArrow.style.pointerEvents = "auto";
+    }
+}
+
+function fixLinks() {
+    const path = window.location.pathname;
+
+    if (path.includes("/recipes/") || path.includes("/categories/")) {
+
+        document.querySelectorAll('a[href="index.html"]').forEach(a => {
+            a.setAttribute("href", "../index.html");
+        });
+
+        document.querySelectorAll('a[href="about.html"]').forEach(a => {
+            a.setAttribute("href", "../about.html");
+        });
+
+        document.querySelectorAll('a[href="categories/ricedishes.html"]').forEach(a => {
+            a.setAttribute("href", "../categories/ricedishes.html");
+        });
     }
 }
