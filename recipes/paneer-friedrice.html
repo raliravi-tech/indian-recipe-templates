@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paneer Fried Rice - Indian Recipe Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,159 +14,147 @@
 </head>
 
 <body>
+
 <!-- Header -->
 <div id="header-placeholder"></div>
+
+<!-- 🔥 Dynamic Data (same pattern as tomato rice) -->
 <script>
 window.recipeData = {
-    title: "Vegetable Paneer Fried Rice",
-    baseServings: 4,
+    title: "Paneer Fried Rice",
+    baseServings: 2,
     ingredients: [
+
         // Rice
-        { name: "basmati rice (cooked and cooled)", amount: 3, unit: "cups", metric: 600, metricUnit: "g" },
-        
+        { name: "basmati rice (cooked & cooled)", amount: 2, unit: "cups", metric: 400, metricUnit: "g" },
+
+        // Paneer
+        { name: "paneer cubes", amount: 200, unit: "g", metric: 200, metricUnit: "g" },
+
         // Vegetables
-        { name: "carrot (finely chopped)", amount: 0.5, unit: "cup", metric: 75, metricUnit: "g" },
-        { name: "french beans (finely chopped)", amount: 0.5, unit: "cup", metric: 75, metricUnit: "g" },
-        { name: "cabbage (finely chopped)", amount: 0.5, unit: "cup", metric: 60, metricUnit: "g" },
-        { name: "bell pepper/capsicum (finely chopped)", amount: 0.5, unit: "cup", metric: 75, metricUnit: "g" },
-        { name: "spring onion/scallion (white and green separated)", amount: 0.5, unit: "cup", metric: 50, metricUnit: "g" },
-        
-        // Aromatics
-        { name: "ginger (finely chopped)", amount: 1, unit: "tbsp", metric: 15, metricUnit: "g" },
-        { name: "garlic (finely chopped)", amount: 1, unit: "tbsp", metric: 15, metricUnit: "g" },
-        { name: "green chili (finely chopped)", amount: 2, unit: "pieces", metric: 2, metricUnit: "pieces" },
-        
-        // Oil and sauces
-        { name: "vegetable oil or sesame oil", amount: 3, unit: "tbsp", metric: 45, metricUnit: "ml" },
-        { name: "soy sauce", amount: 2, unit: "tbsp", metric: 30, metricUnit: "ml" },
-        { name: "white vinegar or rice vinegar", amount: 1, unit: "tsp", metric: 5, metricUnit: "ml" },
-        
-        // Seasonings
-        { name: "black pepper powder", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
-        { name: "salt", amount: 0.75, unit: "tsp", metric: 4, metricUnit: "g" },
-        
-        // Optional
-        { name: "MSG/Ajinomoto (optional)", amount: 0.25, unit: "tsp", metric: 1, metricUnit: "g" }
+        { name: "mixed vegetables (carrot, beans, capsicum)", amount: 1, unit: "cup", metric: 150, metricUnit: "g" },
+        { name: "spring onions (chopped)", amount: 3, unit: "tbsp", metric: 20, metricUnit: "g" },
+        { name: "garlic (finely chopped)", amount: 4, unit: "cloves", metric: 12, metricUnit: "g" },
+
+        // Sauces & seasoning
+        { name: "soy sauce", amount: 1, unit: "tbsp", metric: 15, metricUnit: "ml" },
+        { name: "green chili sauce", amount: 1, unit: "tsp", metric: 5, metricUnit: "ml" },
+        { name: "black pepper", amount: 0.5, unit: "tsp", metric: 2, metricUnit: "g" },
+        { name: "salt", amount: 1, unit: "tsp", metric: 5, metricUnit: "g" },
+
+        // Cooking fat
+        { name: "oil", amount: 2, unit: "tbsp", metric: 30, metricUnit: "ml" }
     ]
 };
 </script>
-<div id="header-placeholder"></div>
 
 <main>
 
-    <div class="recipe-container">
+<div class="recipe-container">
 
-        <div class="recipe-header">
-            <h2 class="recipe-title">Indo-Chinese Vegetable Fried Rice</h2>
-            <p class="recipe-description">
-                Restaurant-style vegetable fried rice with crispy veggies and aromatic flavors - ready in just 20 minutes!
-            </p>
+    <div class="recipe-header">
+        <h2 class="recipe-title">Paneer Fried Rice</h2>
+        <p class="recipe-description">
+            A flavorful Indo-Chinese style fried rice with soft paneer cubes,
+            crisp vegetables, and aromatic sauces.
+        </p>
 
-            <div class="recipe-labels">
-                <span class="label vegetarian">Vegetarian</span>
-                <span class="label rice-dish">Rice Dish</span>
-                <span class="label quick-meal">Quick Meal</span>
-                <span class="label indo-chinese">Indo-Chinese</span>
-            </div>
+        <div class="recipe-labels">
+            <span class="label vegetarian">Vegetarian</span>
+            <span class="label rice-dish">Rice Dish</span>
+            <span class="label quick-meal">Quick Meal</span>
+            <span class="label street-style">Street Style</span>
         </div>
-
-        <div class="recipe-controls">
-            <div class="servings-control">
-                <label>Servings</label>
-                <div class="servings-buttons">
-                    <button class="serving-btn" onclick="decreaseServings()">−</button>
-                    <span id="servings-display">4</span>
-                    <button class="serving-btn" onclick="increaseServings()">+</button>
-                </div>
-            </div>
-
-            <div class="action-buttons">
-                 <button class="action-btn" onclick="changeUnits()" title="Change Units">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                            </svg>
-                        </button>
-                        <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 6 2 18 2 18 9"></polyline>
-                                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-                                <rect x="6" y="14" width="12" height="8"></rect>
-                            </svg>
-                        </button>
-                        <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                        </button>
-                <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
-            </div>
-        </div>
-
-        <div class="ingredients-section">
-            <h3 class="section-title">Ingredients</h3>
-            <ul class="ingredients-list" id="ingredients"></ul>
-        </div>
-
-        <div class="instructions-section">
-            <h3 class="section-title">Instructions</h3>
-
-            <ol class="instructions-list">
-                <li class="instruction-step">
-                    <div class="step-title">Cook and cool the rice</div>
-                    <p>Cook basmati rice with 1¾ cups water until done. Spread on a plate and cool completely for at least 1 hour. Cold, day-old rice works best for fried rice as it's less sticky.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Prep the vegetables</div>
-                    <p>Finely chop all vegetables into small, uniform pieces. Keep carrots, beans, cabbage, bell peppers, and spring onions separate for sequential cooking.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Heat wok on high</div>
-                    <p>Heat oil in a wok or large pan on high heat until smoking hot. High heat is essential for authentic wok flavor and to prevent vegetables from becoming soggy.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Stir-fry aromatics</div>
-                    <p>Add ginger and garlic, stir-fry for 10 seconds. Add green chilies and white part of spring onions, stir-fry for 30 seconds until fragrant.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Cook vegetables in order</div>
-                    <p>Add carrots and beans first, stir-fry 2 minutes. Add cabbage and bell peppers, stir-fry 2 more minutes. Vegetables should be crisp, not soft. Keep stirring constantly on high heat.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Add sauces and seasonings</div>
-                    <p>Push vegetables to the side. Add soy sauce, vinegar, and pepper in the center. Let it sizzle for 5 seconds, then mix with vegetables. Add salt to taste.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Add rice and toss</div>
-                    <p>Add the cooled rice, breaking any clumps with a spatula. Toss everything together on high heat for 3-4 minutes until rice is heated through and slightly crispy. Keep tossing to prevent sticking.</p>
-                </li>
-
-                <li class="instruction-step">
-                    <div class="step-title">Finish and serve</div>
-                    <p>Add green part of spring onions and toss for 30 seconds. Turn off heat. Garnish with more spring onions if desired. Serve immediately while hot with chili sauce or manchurian gravy.</p>
-                </li>
-            </ol>
-        </div>
-
-        <div class="recipe-navigation">
-            <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
-	     <a href="veg-lemonrice.html" class="nav-button next">Lemon Rice</a>
-        </div>
-
     </div>
+
+    <!-- Controls -->
+    <div class="recipe-controls">
+        <div class="servings-control">
+            <label>Servings</label>
+            <div class="servings-buttons">
+                <button class="serving-btn" onclick="decreaseServings()">−</button>
+                <span id="servings-display">2</span>
+                <button class="serving-btn" onclick="increaseServings()">+</button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+
+            <button class="action-btn" onclick="changeUnits()" title="Change Units">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+            </button>
+
+            <button class="action-btn" onclick="printRecipe()" title="Print Recipe">
+                🖨️
+            </button>
+
+            <button class="action-btn" onclick="copyRecipe()" title="Copy Recipe">
+                📋
+            </button>
+
+            <button class="get-cooking-btn" onclick="startCooking()">Get cooking</button>
+        </div>
+    </div>
+
+    <!-- Ingredients -->
+    <div class="ingredients-section">
+        <h3 class="section-title">Ingredients</h3>
+        <ul class="ingredients-list" id="ingredients"></ul>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions-section">
+        <h3 class="section-title">Instructions</h3>
+
+        <ol class="instructions-list">
+
+            <li class="instruction-step">
+                <div class="step-title">Prepare rice</div>
+                <p>Use cooked and cooled rice. Ensure grains are separate.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Cook paneer</div>
+                <p>Lightly sauté paneer cubes in a little oil until slightly golden. Set aside.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Stir-fry vegetables</div>
+                <p>Heat oil in a wok. Add garlic, then vegetables. Stir-fry on high heat.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Add sauces</div>
+                <p>Add soy sauce, chili sauce, pepper, and salt. Mix well.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Combine rice</div>
+                <p>Add rice and paneer. Toss gently without breaking rice.</p>
+            </li>
+
+            <li class="instruction-step">
+                <div class="step-title">Finish</div>
+                <p>Garnish with spring onions and serve hot.</p>
+            </li>
+
+        </ol>
+    </div>
+
+    <!-- Navigation -->
+    <div class="recipe-navigation">
+        <a href="../categories/ricedishes.html" class="nav-button prev">Back to Rice Dishes</a>
+        <a href="veg-friedrice.html" class="nav-button next">Veg Fried Rice</a>
+    </div>
+
+</div>
 
 </main>
 
 <!-- Footer -->
-<div id="footer-placeholder"></div> 
+<div id="footer-placeholder"></div>
 
 </body>
 </html>
